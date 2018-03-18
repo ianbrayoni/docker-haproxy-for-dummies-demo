@@ -1,6 +1,6 @@
 [![Build Status](https://travis-ci.org/ianbrayoni/docker-haproxy-for-dummies-demo.svg?branch=master)](https://travis-ci.org/ianbrayoni/docker-haproxy-for-dummies-demo)
 
-# Docker-Compose HAproxy for dummies demo
+# Docker-Compose HAProxy for dummies demo
 Load balancing is essential for high availability, minimise downtime, seamless maintenance, distribute load and take advantage of features supported by load balancing software.
 
 Suppose you need to quickly learn about load-balancing and your tools of choice are `HAProxy` and `Docker`, look no further. This short demo shows how to use `docker-compose` to create a web service connected to a load balancer.
@@ -53,7 +53,7 @@ Check that the service is running by curlng the IP from the command line or view
     
 ### Web browser 
 
-    http://http://localhost:8000/
+    http://localhost:8000/
 
 Output from both the browser or curl
 
@@ -78,8 +78,8 @@ Hit the following url
     http://localhost:1936/
 
 # Additional Notes
-[dockercloud/haproxy](https://github.com/docker/dockercloud-haproxy) is used because it balances between linked containers and, if launched in Docker Cloud or using Docker Compose => `v2`, reconfigures itself when a linked cluster member redeploys, joins or leaves.
-It is also is compatabile with Docker Swarm.
+[dockercloud/haproxy](https://github.com/docker/dockercloud-haproxy) is used because it balances between linked containers and, if launched in Docker Cloud or using Docker Compose `v2` or `v3`, reconfigures itself when a linked cluster member redeploys, joins or leaves.
+It is also compatabile with Docker Swarm.
 
 Further configuration to HAProxy can be done using environment variables. For further details see [configuration](https://github.com/docker/dockercloud-haproxy/blob/master/README.md#configuration)
 
