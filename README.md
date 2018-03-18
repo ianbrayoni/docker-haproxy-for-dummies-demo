@@ -35,7 +35,7 @@ The instructions assume that you have already installed [Docker](https://docs.do
 
 In order to get started be sure to clone this project onto your Docker Host. 
 
-    git clone https://github.com/ianbrayoni/docker-haproxy-for-dummies-demo.git .
+    git clone https://github.com/ianbrayoni/docker-haproxy-for-dummies-demo.git
 
 # How to get up and running
 Spin up the services and scale the web tier to a number of your choice. E.g:
