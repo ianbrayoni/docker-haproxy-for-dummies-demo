@@ -1,0 +1,40 @@
+version: '3'
+services:
+  web:
+    build: .
+    ports:
+      - 5000
+    networks:
+      - front-tier
+      - back-tier
+    volumes:
+      - ./:/usr/src/app
+
+  redis:
+    image: redis
+    links:
+      - web
+    networks:
+      - back-tier
+
+  lb:
+    image: 'dockercloud/haproxy:latest'
+    ports: 
+      - 8000:80
+      - 1936:1936
+    links:
+      - web
+    networks: 
+      - front-tier
+      - back-tier
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock 
+    environment:
+      - STATS_AUTH="admin:admin"
+      - STATS_PORT=1936
+
+networks:
+  front-tier:
+    driver: bridge
+  back-tier:
+    driver: bridge
