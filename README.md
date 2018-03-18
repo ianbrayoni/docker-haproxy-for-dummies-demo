@@ -1,7 +1,7 @@
 # docker-haproxy-for-dummies-demo
 Load balancing is essential for high availability, minimise downtime, seamless maintenance, distribute load and take advantage of features supported by load balancing software.
 
-Suppose you need to quickly learn about load-balancing and your tools of choice are `HAProxy` and `Docker`, look no further. This short demo shows how to use docker-compose to create a web service connected to a load balancer.
+Suppose you need to quickly learn about load-balancing and your tools of choice are `HAProxy` and `Docker`, look no further. This short demo shows how to use `docker-compose` to create a web service connected to a load balancer.
 
 # Software
 At the point of this release, these are the versions used;
@@ -53,14 +53,14 @@ Check that the service is running by curlng the IP from the command line or view
 
     http://http://localhost:8000/
 
-Output from both the browser or curl;
+Output from both the browser or curl
 
     Hello World!
     I have been seen 6 times.
 
     My hostname is 112ef0991ede.
 
-A snippet of the logs:
+A snippet of the logs
 
     web_1    | 172.22.0.6 - - [18/Mar/2018 15:48:09] "GET / HTTP/1.1" 200 -
     web_2    | 172.22.0.6 - - [18/Mar/2018 15:48:24] "GET / HTTP/1.1" 200 -
@@ -71,10 +71,12 @@ A snippet of the logs:
 
 
 ### HA Proxy Statistics
+Hit the following url
+
     http://localhost:1936/
 
 # Additional Notes
-dockercloud/haproxy is used because it balances between linked containers and, if launched in Docker Cloud or using Docker Compose => v2, reconfigures itself when a linked cluster member redeploys, joins or leaves.
+[dockercloud/haproxy](https://github.com/docker/dockercloud-haproxy) is used because it balances between linked containers and, if launched in Docker Cloud or using Docker Compose => `v2`, reconfigures itself when a linked cluster member redeploys, joins or leaves.
 It is also is compatabile with Docker Swarm.
 
 Further configuration to HAProxy can be done using environment variables. For further details see [configuration](https://github.com/docker/dockercloud-haproxy/blob/master/README.md#configuration)
@@ -107,6 +109,5 @@ The load balancer, HAProxy, container is a single point of failure.
 3. Deploy to `docker-cloud`
 
 # Acknowledgement
-I mainly learnt and reused information from the following sources:
 1. [@vegasbrianc's demo](https://github.com/vegasbrianc/docker-compose-demo)
 2. https://github.com/docker/dockercloud-haproxy
