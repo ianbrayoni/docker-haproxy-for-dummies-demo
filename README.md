@@ -1,6 +1,6 @@
-https://travis-ci.org/ianbrayoni/docker-haproxy-for-dummies-demo#
+[![Build Status](https://travis-ci.org/ianbrayoni/docker-haproxy-for-dummies-demo.svg?branch=master)](https://travis-ci.org/ianbrayoni/docker-haproxy-for-dummies-demo)
 
-# docker-haproxy-for-dummies-demo
+# Docker-Compose HAproxy for dummies demo
 Load balancing is essential for high availability, minimise downtime, seamless maintenance, distribute load and take advantage of features supported by load balancing software.
 
 Suppose you need to quickly learn about load-balancing and your tools of choice are `HAProxy` and `Docker`, look no further. This short demo shows how to use `docker-compose` to create a web service connected to a load balancer.
