@@ -1,3 +1,5 @@
+https://travis-ci.org/ianbrayoni/docker-haproxy-for-dummies-demo#
+
 # docker-haproxy-for-dummies-demo
 Load balancing is essential for high availability, minimise downtime, seamless maintenance, distribute load and take advantage of features supported by load balancing software.
 
