@@ -1,3 +1,25 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [docker-haproxy-for-dummies-demo](#docker-haproxy-for-dummies-demo)
+- [Software](#software)
+      - [Docker](#docker)
+      - [Docker-Compose](#docker-compose)
+- [Install](#install)
+- [How to get up and running](#how-to-get-up-and-running)
+    - [Curling from the command line](#curling-from-the-command-line)
+    - [Web browser](#web-browser)
+    - [HA Proxy Statistics](#ha-proxy-statistics)
+- [Additional Notes](#additional-notes)
+- [Limitations](#limitations)
+- [Next steps](#next-steps)
+- [Acknowledgement](#acknowledgement)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
+[![Build Status](https://travis-ci.org/ianbrayoni/docker-haproxy-for-dummies-demo.svg?branch=master)](https://travis-ci.org/ianbrayoni/docker-haproxy-for-dummies-demo)
+
 # docker-haproxy-for-dummies-demo
 Load balancing is essential for high availability, minimise downtime, seamless maintenance, distribute load and take advantage of features supported by load balancing software.
 
