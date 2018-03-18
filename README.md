@@ -2,10 +2,10 @@
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 **Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
 
-- [docker-haproxy-for-dummies-demo](#docker-haproxy-for-dummies-demo)
+- [Docker-Compose HAProxy Demo](#docker-compose-haproxy-demo)
 - [Software](#software)
-      - [Docker](#docker)
-      - [Docker-Compose](#docker-compose)
+    - [Docker](#docker)
+    - [Docker-Compose](#docker-compose)
 - [Install](#install)
 - [How to get up and running](#how-to-get-up-and-running)
     - [Curling from the command line](#curling-from-the-command-line)
@@ -20,7 +20,7 @@
 
 [![Build Status](https://travis-ci.org/ianbrayoni/docker-haproxy-for-dummies-demo.svg?branch=master)](https://travis-ci.org/ianbrayoni/docker-haproxy-for-dummies-demo)
 
-# docker-haproxy-for-dummies-demo
+# Docker-Compose HAProxy Demo
 Load balancing is essential for high availability, minimise downtime, seamless maintenance, distribute load and take advantage of features supported by load balancing software.
 
 Suppose you need to quickly learn about load-balancing and your tools of choice are `HAProxy` and `Docker`, look no further. This short demo shows how to use `docker-compose` to create a web service connected to a load balancer.
@@ -28,7 +28,7 @@ Suppose you need to quickly learn about load-balancing and your tools of choice 
 # Software
 At the point of this release, these are the versions used;
 
-#### Docker
+### Docker
     Client:
         Version:	   17.12.0-ce
         API version:   1.35
@@ -47,7 +47,7 @@ At the point of this release, these are the versions used;
             OS/Arch:	linux/amd64
             Experimental:	true
 
-#### Docker-Compose
+### Docker-Compose
     docker-compose version 1.18.0, build 8dd22a9
 
 # Install
@@ -123,7 +123,7 @@ This can be done using `BALANCE` environment variable.
         - BALANCE=leastconn
 
 # Limitations
-The load balancer, HAProxy, container is a single point of failure.
+* The load balancer, HAProxy, container is a single point of failure.
 
 # Next steps
 1. Set up a redudant or highly available load-balancer using tools like `keepalived`
