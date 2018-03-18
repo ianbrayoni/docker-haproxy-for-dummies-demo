@@ -55,7 +55,7 @@ The instructions assume that you have already installed [Docker](https://docs.do
 
 In order to get started be sure to clone this project onto your Docker Host. 
 
-    git clone https://github.com/ianbrayoni/docker-haproxy-for-dummies-demo.git .
+    git clone https://github.com/ianbrayoni/docker-haproxy-for-dummies-demo.git
 
 # How to get up and running
 Spin up the services and scale the web tier to a number of your choice. E.g:
@@ -73,7 +73,7 @@ Check that the service is running by curlng the IP from the command line or view
     
 ### Web browser 
 
-    http://http://localhost:8000/
+    http://localhost:8000/
 
 Output from both the browser or curl
 
@@ -98,8 +98,8 @@ Hit the following url
     http://localhost:1936/
 
 # Additional Notes
-[dockercloud/haproxy](https://github.com/docker/dockercloud-haproxy) is used because it balances between linked containers and, if launched in Docker Cloud or using Docker Compose => `v2`, reconfigures itself when a linked cluster member redeploys, joins or leaves.
-It is also is compatabile with Docker Swarm.
+[dockercloud/haproxy](https://github.com/docker/dockercloud-haproxy) is used because it balances between linked containers and, if launched in Docker Cloud or using Docker Compose `v2` or `v3`, reconfigures itself when a linked cluster member redeploys, joins or leaves.
+It is also compatabile with Docker Swarm.
 
 Further configuration to HAProxy can be done using environment variables. For further details see [configuration](https://github.com/docker/dockercloud-haproxy/blob/master/README.md#configuration)
 
